@@ -1,0 +1,8 @@
+dante-server:
+  image: mansoto8/dante-server
+  ports:
+    - 9898:9898
+  volumes:
+    - ./sockd.conf:/etc/sockd.conf
+    - ./sockd.errLog:/var/log/sockd.errlog
+    - ./sockd:/var/log/sockd.log
