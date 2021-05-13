@@ -6,7 +6,7 @@ Dante server expose a socks proxy with authentication that can redirect https pe
 
 ## Running the image
 
-It can be executed via the docker-compose.yml file with the following command:
+It can be executed via the `docker-compose.yml` file with the following command:
 
 ```sh
 docker-compose up -d
@@ -18,17 +18,17 @@ To see the logs use:
 docker-compose logs -f dante-server
 ``` 
 
-The logs are also available in the host machine via a volume in the files sockd.log and sockd.errLog in the host local repo location.
+The logs are also available in the host machine via a volume in the files `sockd.log` and `sockd.errLog` in the host local repo location.
 
-The configuration file for dante server is the sockd.conf available also in the host via a volume in the host local repo location.
+The configuration file for dante server is the `sockd.conf` available also in the host via a volume in the host local repo location.
 
-The default configuration ask for authentication with user/password : socks5/socks5. To test the proxy is working execute the following command in the host:
+The default configuration ask for authentication with `user/password` : `socks5/socks5`. To test the proxy is working execute the following command in the host:
 
 ```sh
  curl --proxy 'socks5h://socks5:socks@localhost:9898' 'https://www.google.com/'
 ```
 
-If for example you want to disable authentication you can go to the socksd.conf file and change the value for `socksmethod` from `username` to `none`. And then restart the service:
+If for example you want to disable authentication you can go to the `socksd.conf` file and change the value for `socksmethod` from `username` to `none`. And then restart the service:
 
 ```sh
 docker-compose restart
@@ -36,7 +36,7 @@ docker-compose restart
 
 ## Testing in Firefox
 
-For testing the proxy with a browser I recommend using firefox and a plugin called Proxy Toggle which allows to set authentication credentials for a socks proxy. Next is the setup I used to test it:
+For testing the proxy with a browser I recommend using firefox and a plugin called Proxy Toggle which allows setting authentication credentials for a socks proxy. Next is the setup I used to test it:
 
 [![Plugin screenshot][plugin-screenshot]]
 
