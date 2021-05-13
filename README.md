@@ -2,7 +2,9 @@
 
 ## About The Project
 
-Here is the docker file used to generate the dante server image available in https://hub.docker.com/repository/docker/mansoto8/dante-server
+Dante server expose a socks proxy with authentication that can redirect https petitions. In this project are the files used for generating the dante server image available in https://hub.docker.com/repository/docker/mansoto8/dante-server
+
+## Running the image
 
 It can be executed via the docker-compose.yml file with the following command:
 
@@ -31,6 +33,8 @@ If for example you want to disable authentication you can go to the socksd.conf 
 ```sh
 docker-compose restart
 ``` 
+
+## Testing in Firefox
 
 For testing the proxy with a browser I recommend using firefox and a plugin called Proxy Toggle which allows to set authentication credentials for a socks proxy. Next is the setup I used to test it:
 
